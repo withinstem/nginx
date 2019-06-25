@@ -1,0 +1,3 @@
+#!/bin/sh
+
+tools/ops-docker/ops-docker -c conf/docker.cfg -l build deploy
