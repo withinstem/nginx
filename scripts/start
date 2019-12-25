@@ -1,3 +1,5 @@
 #!/bin/sh
 
-tools/ops-docker/ops-docker -c conf/docker.cfg -l build deploy
+PATH="tools/ops-docker:${PATH}"
+
+ops-docker -c conf/docker.cfg -l build deploy
