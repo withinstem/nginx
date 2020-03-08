@@ -2,4 +2,4 @@
 
 PATH="tools/ops-docker:${PATH}"
 
-ops-docker -c conf/docker.cfg rollback
+ops-docker -c conf/docker.cfg $@ rollback
