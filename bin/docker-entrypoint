@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -e
+
+nginx -t -c ${NGINX_CONF}/nginx.conf
+
+if [[ "$1" = "nginx-docker" ]]; then
+  deploy conf
+  deploy html
+fi
+
+exec "$@"

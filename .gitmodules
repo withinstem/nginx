@@ -1,5 +1,6 @@
 [submodule "tools/ops-docker"]
-	shallow = true
 	path = tools/ops-docker
 	url = https://github.com/ops-tools/ops-docker.git
-	branch = master
+[submodule "tools/ops-revision"]
+	path = tools/ops-revision
+	url = https://github.com/ops-tools/ops-revision.git

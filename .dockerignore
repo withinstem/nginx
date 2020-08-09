@@ -1,5 +1,7 @@
 *
 */
 docker*.cfg
-conf/*.sh
-!conf/
+!tools/ops-revision/ops-revision
+!bin/
+!nginx/
+!html/

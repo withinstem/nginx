@@ -1,0 +1,28 @@
+#!/bin/bash
+
+set -e
+
+target="$1"
+src=""
+dst=""
+
+case "${target}" in
+  conf*)
+    src="${NGINX_CONF}"
+    dst="${NGINX_CONF_LN}"
+    ;;
+
+  html|www)
+    src="${NGINX_HTML}"
+    dst="${NGINX_HTML_LN}"
+    ;;
+
+  *)
+    echo "Do nothing"
+    exit 0
+    ;;
+esac
+
+cd /
+
+ops-revision -s "${src}" "${dst}"

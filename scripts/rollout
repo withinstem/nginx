@@ -2,4 +2,12 @@
 
 PATH="tools/ops-docker:${PATH}"
 
-ops-docker -c conf/docker.cfg $@ rollout
+suffix="$1"
+
+if [ "${suffix}" = 'full' ]; then
+  suffix=''
+elif [ ! -z "${suffix}" ]; then
+  suffix="-${suffix}"
+fi
+
+ops-docker -c "conf/docker${suffix}.cfg" rollout
