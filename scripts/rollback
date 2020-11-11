@@ -4,7 +4,7 @@ PATH="tools/ops-docker:${PATH}"
 
 suffix="$1"
 
-if [ "${suffix}" = 'full' ]; then
+if [ "${suffix}" = 'app' ]; then
   suffix=''
 elif [ ! -z "${suffix}" ]; then
   suffix="-${suffix}"
