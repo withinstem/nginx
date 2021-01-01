@@ -18,11 +18,11 @@ case "${target}" in
     ;;
 
   *)
-    echo "Do nothing"
+    echo "No target known, nothing to deploy"
     exit 0
     ;;
 esac
 
-cd /
+echo "Deploying nginx with target \`${target}'"
 
 ops-revision -s "${src}" "${dst}"

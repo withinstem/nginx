@@ -1,4 +1,4 @@
-FROM nginx:1.19.1
+FROM nginx:1.19.6
 
 ENV NGINX_CONF=/etc/nginx-default
 ENV NGINX_CONF_LN=/var/nginx/conf
@@ -29,4 +29,4 @@ VOLUME /var/www
 
 ENTRYPOINT ["docker-entrypoint"]
 
-CMD ["nginx-docker"]
+CMD ["nginx", "-g", "daemon off;"]

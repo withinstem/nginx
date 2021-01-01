@@ -2,6 +2,8 @@
 
 set -e
 
+echo "Starting nginx"
+
 nginx -t -c ${NGINX_CONF}/nginx.conf
 
 exec "$@"
